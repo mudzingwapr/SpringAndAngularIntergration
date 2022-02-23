@@ -1,0 +1,28 @@
+
+<h3>All The Students Are here</h3>
+<hr>
+<table class="table">
+    <tr big-info text-white>
+        <th>ID</th>
+        <th>FIRST NAME</th>
+        <th>SURNAME</th>
+        <th>AMOUNT</th>
+        <th>DISCOUNT</th>
+        <th>ACTUAL_AMOUNT</th>
+        <th>COURSES</th>
+        <th>OPERATIONS</th>
+    </tr>
+    <tr *ngFor="let m of student">
+      <td>{{m.sid}}</td>
+      <td>{{m.fname}}</td>
+      <td>{{m.sname}}</td>
+      <td>{{m.amount}}</td>
+      <td>{{m.discount}}</td>
+      <td>{{m.actualAmount}}</td>
+      <td>{{m.course}}</td>
+      <td><button class="btn btn-danger"(click)='deleteStudent(m.sid)'>DELETE </button> | <button class="btn btn-success"> UPDATE</button>
+       </td>
+    </tr>
+</table>
+<hr>
+{{message}}
